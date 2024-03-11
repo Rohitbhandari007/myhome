@@ -1,6 +1,6 @@
-# ABOUT PROJECT
-
+# Smart Home Light System
 This project is built to control the lights of rooms. The technologies used are:
+- Python 3.8.10
 - Django (backend)
 - Django Channels
 - SQLite3 Database
@@ -14,15 +14,15 @@ git clone https://github.com/Rohitbhandari007/myhome.git
 
  - Create a virtual environment
 
-Linux/MacOS:
-```
-virtualenv env
-source env/bin/activate
-``` 
-Windows: 
-```
-cd env\Scripts\activate
-``` 
+    Linux/MacOS:
+    ```
+    virtualenv env
+    source env/bin/activate
+    ``` 
+    Windows: 
+    ```
+    cd env\Scripts\activate
+    ``` 
 
 - Install the requirements
 ```
