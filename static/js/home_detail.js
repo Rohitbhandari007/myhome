@@ -85,8 +85,17 @@ function updateLights(data) {
 
   lightElem.querySelector(".light-brightness").value = data.brightness;
   lightElem.querySelector(".light-color").value = data.color;
-  lightElem.querySelector(".light-switch").value = data.switch;
-  lightElem.querySelector(".light-status").querySelector(".status").innerText ="Status:" + data.switch;
-  lightElem.querySelector(".brightness").innerHTML= data.brightness + "%";
-}
+  lightElem.querySelector(".light-switch").checked = data.switch === "on" ? true : false;
+  lightElem.querySelector(".light-status").querySelector(".status").innerText =
+    "Status:" + data.switch;
+  lightElem.querySelector(".brightness").innerHTML = data.brightness + "%";
 
+  const bulb = lightElem
+    .querySelector(".light-status")
+    .querySelector(".light-image");
+  if (data.switch === "off"){
+    bulb.src = bulb.src.replace("bulb-on", "bulb-off");
+  } else{
+    bulb.src = bulb.src.replace("bulb-off", "bulb-on");
+  }
+}

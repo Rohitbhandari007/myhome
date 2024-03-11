@@ -41,11 +41,21 @@
             <span>{{ light.model }}</span>
           </div>
           <div class="light-status">
+            
+            {% if light.is_online %}
             <img
-              src="{% static 'img/bulb.svg' %}"
+              src="{% static 'img/bulb-on.svg' %}"
               alt="light image"
               class="light-image"
             />
+            {% else %}
+            <img
+            src="{% static 'img/bulb-off.svg' %}"
+            alt="light image"
+            class="light-image"
+          />
+            {% endif %}
+            
             <span class="status">Status: {% if light.is_online %} on {% else %} off {% endif %}</span>
           </div>
 
