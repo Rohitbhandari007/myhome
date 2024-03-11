@@ -1,7 +1,7 @@
 # Clone the project
-
-git clone https://
-
+```
+git clone https://github.com/Rohitbhandari007/myhome.git
+```
 
 # Create a virtual environment
 
@@ -26,4 +26,10 @@ pip install -r requrements.txt
 ```
 python manage.py migrate
 python mange.py runserver
+```
+
+# Run redis on a docker container 
+To enable layers for multiple instances to communicate with each other
+```
+sudo docker run --rm -p 6379:6379 redis:7
 ```
