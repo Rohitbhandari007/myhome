@@ -42,3 +42,23 @@ python manage.py migrate
 python mange.py runserver
 ```
 
+- Load the data in database using fixures
+```
+python manage.py loaddata all_fixtures.json
+```
+
+- Navigate to  http://127.0.0.1:8000/
+
+    Now you can see the homes and navigate to each of them.
+
+
+----
+----
+Additionally , after the setup is complete, to add and remove data ( homes/rooms/lights ) we can use django's admin panel 
+- First we have to create a super user
+```
+python manage.py createsuperuser
+```
+- Navigate to : http://127.0.0.1:8000/admin/
+- Log in with the superuser credentials
+- You can see now do the basic curd of the entities using the panel

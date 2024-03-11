@@ -4,15 +4,19 @@
 {% block content %}
 <input type="hidden" id="home-id" value="{{ home.id }}" />
 <div class="home-detail-container main-container">
-  <div class="home-description">
-    <h2>Property Name: {{ home.name }}</h2>
-    <p>Address: {{ home.address }}</p>
-    <p>Details: {{ home.description }}</p>
+  <div class="home">
+    <div class="home-description">
+      <h2>Property Name: {{ home.name }}</h2>
+      <p>Address: {{ home.address }}</p>
+      <p>Details: {{ home.description }}</p>
+      <p>Added at: {{ home.created }}</p>
+      <p>Location: {{ home.location }}</p>
+      <p>No of rooms: {{ room_count }}</p>
+    </div>
     <img src="{{ home.image.url }}" alt="home image" />
-    <p>Added at: {{ home.created }}</p>
-    <p>Location: {{ home.location }}</p>
-    <p>No of rooms: {{ room_count }}</p>
+
   </div>
+ 
   <div class="rooms-container">
     {% for room in rooms %}
     <div class="room">

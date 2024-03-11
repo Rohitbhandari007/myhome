@@ -1,0 +1,212 @@
+[
+{
+  "model": "core.lightningscenes",
+  "pk": 1,
+  "fields": {
+    "name": "day",
+    "color": "#ffffff"
+  }
+},
+{
+  "model": "core.lightningscenes",
+  "pk": 2,
+  "fields": {
+    "name": "Party",
+    "color": "blue"
+  }
+},
+{
+  "model": "core.lightningscenes",
+  "pk": 3,
+  "fields": {
+    "name": "Peace",
+    "color": "wheat"
+  }
+},
+{
+  "model": "core.home",
+  "pk": 3,
+  "fields": {
+    "created": "2024-03-09T17:37:17.604Z",
+    "modified": "2024-03-09T17:37:17.604Z",
+    "name": "Texas House",
+    "description": "Texas house of beautiful views",
+    "image": "home_layouts/villa_VRbsnW1.jpg",
+    "is_online": true,
+    "location": "22 Downtown"
+  }
+},
+{
+  "model": "core.home",
+  "pk": 4,
+  "fields": {
+    "created": "2024-03-10T06:03:44.238Z",
+    "modified": "2024-03-10T06:03:44.238Z",
+    "name": "Smart Green house",
+    "description": "",
+    "image": "home_layouts/house.jpeg",
+    "is_online": true,
+    "location": "Austin"
+  }
+},
+{
+  "model": "core.room",
+  "pk": 2,
+  "fields": {
+    "created": "2024-03-09T17:55:01.543Z",
+    "modified": "2024-03-10T06:25:00.905Z",
+    "home": 3,
+    "name": "Bedroom",
+    "description": "its a bedroom",
+    "floor": 0
+  }
+},
+{
+  "model": "core.room",
+  "pk": 3,
+  "fields": {
+    "created": "2024-03-09T17:55:20.041Z",
+    "modified": "2024-03-09T17:55:20.041Z",
+    "home": 3,
+    "name": "Living Room",
+    "description": "Its a living room",
+    "floor": 0
+  }
+},
+{
+  "model": "core.light",
+  "pk": 2,
+  "fields": {
+    "created": "2024-03-09T17:55:43.845Z",
+    "modified": "2024-03-11T05:16:23.557Z",
+    "room": 3,
+    "model": "LED-12Watt",
+    "is_online": true
+  }
+},
+{
+  "model": "core.light",
+  "pk": 3,
+  "fields": {
+    "created": "2024-03-09T17:55:58.819Z",
+    "modified": "2024-03-11T10:50:37.440Z",
+    "room": 3,
+    "model": "LED-12Watt",
+    "is_online": true
+  }
+},
+{
+  "model": "core.light",
+  "pk": 4,
+  "fields": {
+    "created": "2024-03-09T17:56:48.543Z",
+    "modified": "2024-03-11T10:48:34.656Z",
+    "room": 2,
+    "model": "LED 22 Watt",
+    "is_online": true
+  }
+},
+{
+  "model": "core.light",
+  "pk": 5,
+  "fields": {
+    "created": "2024-03-09T17:57:03.063Z",
+    "modified": "2024-03-11T05:50:41.664Z",
+    "room": 2,
+    "model": "LED 33 Watt",
+    "is_online": true
+  }
+},
+{
+  "model": "core.light",
+  "pk": 6,
+  "fields": {
+    "created": "2024-03-10T06:24:30.443Z",
+    "modified": "2024-03-11T05:46:57.480Z",
+    "room": 2,
+    "model": "LED 44 Watt",
+    "is_online": true
+  }
+},
+{
+  "model": "core.light",
+  "pk": 7,
+  "fields": {
+    "created": "2024-03-10T06:24:30.444Z",
+    "modified": "2024-03-11T05:45:16.861Z",
+    "room": 2,
+    "model": "LED 55 Watt",
+    "is_online": false
+  }
+},
+{
+  "model": "core.lightningconfigurations",
+  "pk": 1,
+  "fields": {
+    "light": 2,
+    "color": "#8ae234",
+    "brightness": 65,
+    "theme": null
+  }
+},
+{
+  "model": "core.lightningconfigurations",
+  "pk": 2,
+  "fields": {
+    "light": 3,
+    "color": "#4e9a06",
+    "brightness": 100,
+    "theme": null
+  }
+},
+{
+  "model": "core.lightningconfigurations",
+  "pk": 3,
+  "fields": {
+    "light": 4,
+    "color": "#8ae234",
+    "brightness": 66,
+    "theme": null
+  }
+},
+{
+  "model": "core.lightningconfigurations",
+  "pk": 4,
+  "fields": {
+    "light": 5,
+    "color": "#8ae234",
+    "brightness": 53,
+    "theme": null
+  }
+},
+{
+  "model": "core.lightningconfigurations",
+  "pk": 5,
+  "fields": {
+    "light": null,
+    "color": "#ffffff",
+    "brightness": 100,
+    "theme": null
+  }
+},
+{
+  "model": "core.lightningconfigurations",
+  "pk": 6,
+  "fields": {
+    "light": 6,
+    "color": "#73d216",
+    "brightness": 91,
+    "theme": null
+  }
+},
+{
+  "model": "core.lightningconfigurations",
+  "pk": 7,
+  "fields": {
+    "light": 7,
+    "color": "#f3f3f3",
+    "brightness": 82,
+    "theme": null
+  }
+}
+]

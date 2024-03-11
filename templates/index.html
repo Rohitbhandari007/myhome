@@ -5,13 +5,17 @@
       {% for home in homes %}
       <a href="{% url 'home_detail' home.id %}">
         <div class="home">
-            <h2>{{ home.name }}</h2>
-            <p>{{ home.address }}</p>
-            <p>{{ home.description }}</p>
-            <p>{{ home.created }}</p>
-            <p>{{ home.location }}</p>
-            <img src="{{ home.image.url }}" alt="home image" />
-          </div>
+          <img src="{{ home.image.url }}" alt="home image" />
+          <div class="home-details">
+              <h2>{{ home.name }}</h2>
+              <p>{{ home.address }}</p>
+              <p>{{ home.description }}</p>
+              <p>{{ home.created }}</p>
+              <p>{{ home.location }}</p>
+            
+            </div>
+        </div>
+        
       </a>
       {% endfor %}
 {% endblock %}

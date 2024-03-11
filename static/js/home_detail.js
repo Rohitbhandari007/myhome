@@ -80,8 +80,6 @@ function prepareMessage(lightId, save = false) {
  */
 function updateLights(data) {
   const lightElem = document.getElementById(`light-${data.light_id}`);
-  
-
   const lightBox = lightElem.querySelector(".light-box");
   lightBox.style.backgroundColor = data.color;
 
