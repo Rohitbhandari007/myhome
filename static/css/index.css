@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+    --primary-background-color: #cccc;
+    --secondary-background-color: #fff;
+    --border-color: #f7f0f0;
+    --hover-color: gray;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.homes-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-background-color);
+  height: 100vh;
+  padding: 20px;
+}
+
+.homes-container a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-background-color);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  gap: 10px;
+}
+.home:hover {
+  border: 1px solid var(--hover-color);
+}
+.home img, .home-detail-container img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+
+/* home details css  */
+
+.home-detail-container{
+    padding: 20px;
+    background-color: var(--primary-background-color);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.home-description{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius:10px ;
+    background-color: var(--secondary-background-color);
+}
+
+/* Room css */
+
+
+.room{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--secondary-background-color);
+    gap: 10px;
+    transition: 0.3s ease;
+
+}
+.room h1{
+    font-size: 22px
+}
+
+/* Room lights css */
+
+.rooms-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    
+}
+
+.light-status{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.light-image{
+    max-width: 50px !important;
+    max-height: 50px !important;
+
+}
+ .lights{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start  ;
+    flex-wrap: wrap;   
+    width: 100%;
+    gap: 20px;
+    
+}
+
+.light{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    min-width: 300px;
+    max-width: 300px;
+    border: 1px solid var(--primary-background-color);
+    align-items: center;
+    
+    
+} 
+
+
+.light-box{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Room light controls css */
+
+
+.light-controls{
+    display: flex;
+    flex-direction: column;
+     justify-content: space-between;
+    align-items: start;
+    gap: 10px; 
+     border: 1px solid var(--primary-background-color);
+    padding: 14px;
+    border-radius: 10px;
+    opacity: 1;
+    z-index: 10;
+    margin-top: 50px;  
+    
+
+}
+
+
+button{
+    padding: 10px 5px;
+    outline: 0;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 100%;
+    opacity: 1;
+    
+}
+
+.input-control{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    z-index: 10;
+    position: relative;
+    opacity: 1;
+}
+
+.hide{
+    display: none;
+}
+
+
+/* Room light controls css */
+
+.submit-buttons{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+
+
+/* Some overrides */
+.main-container{
+    padding-left: 150px;
+    padding-right: 150px;
+} 

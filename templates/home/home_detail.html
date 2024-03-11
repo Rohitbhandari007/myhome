@@ -1,0 +1,107 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block content %}
+<input type="hidden" id="home-id" value="{{ home.id }}" />
+<div class="home-detail-container main-container">
+  <div class="home-description">
+    <h2>Property Name: {{ home.name }}</h2>
+    <p>Address: {{ home.address }}</p>
+    <p>Details: {{ home.description }}</p>
+    <img src="{{ home.image.url }}" alt="home image" />
+    <p>Added at: {{ home.created }}</p>
+    <p>Location: {{ home.location }}</p>
+    <p>No of rooms: {{ room_count }}</p>
+  </div>
+  <div class="rooms-container">
+    {% for room in rooms %}
+    <div class="room">
+      <div class="details">
+        <h1>Room Name: {{ room.name }}</h1>
+        <p>Floor: {{ room.floor }}</p>
+        <p>Description: {{ room.description }}</p>
+      </div>
+      <div class="lights">
+        {% for light in room.devices.all %}
+        <div
+          class="light"
+          id="light-{{ light.id }}"
+          data-light-details="{{ light }}"
+          data-light-configurations="{{ light.configurations }}"
+        >
+          <div
+            style="background-color: {% if light.configurations %} {{ light.configurations.color }}{% endif %};
+            opacity: {% if light.configurations %}{{ light.configurations.brightness }}{% endif %}"
+            class="light-box"
+          >
+            <span>{{ light.model }}</span>
+          </div>
+          <div class="light-status">
+            <img
+              src="{% static 'img/bulb.svg' %}"
+              alt="light image"
+              class="light-image"
+            />
+            <span class="status">Status: {% if light.is_online %} on {% else %} off {% endif %}</span>
+          </div>
+
+          <div class="light-controls" id="controls-{{ light.id }}">
+            <div class="input-control">
+              <label for="radios">Switch</label>
+              <input
+                type="checkbox"
+                class="light-switch"
+                data-light-id="{{ light.id }}"
+                {% if light.is_online %} checked {% endif %}
+              />
+            </div>
+            <div class="input-control">
+              <label for="color">Choose Color</label>
+              <input
+                type="color"
+                class="light-color"
+                data-light-id="{{ light.id }}"
+                value="{% if light.configurations and light.configurations.color %}{{ light.configurations.color }}{% endif %}"              />
+              
+            </div>
+            <div class="input-control">
+              <label for="brightness">Brightness
+                <span class="brightness">
+                {% if light.configurations and light.configurations.brightness %}{{ light.configurations.brightness }} %{% endif %}
+              </span>
+              </label>
+                <input
+                  type="range"
+                  class="light-brightness"
+                  data-light-id="{{ light.id }}"
+                  min="0"
+                  max="100"
+                  value="{% if light.configurations and light.configurations.brightness %}{{ light.configurations.brightness }}{% endif %}"
+                />
+            </div>
+            
+            <div class="submit-buttons">
+              <button
+                class="light-apply"
+                data-light-id="{{ light.id }}"
+                onclick="handleApply(this)"
+              >
+                Apply
+              </button>
+              <button
+                class="light-save"
+                data-light-id="{{ light.id }}"
+                onclick="handleSave(this)"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
