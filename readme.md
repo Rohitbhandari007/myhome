@@ -36,11 +36,15 @@ To enable layers for multiple instances to communicate with each other
 sudo docker run --rm -p 6379:6379 redis:7
 ```
 
+Create an .env file as per .env.example
+
+
 -  Run the migrations and start the server
 ```
 python manage.py migrate
 python mange.py runserver
 ```
+
 
 - Load the data in database using fixures
 ```
